@@ -85,7 +85,7 @@ function addPolygons() {
             super(...args);
             this.data.loadGeoJson('https://raw.githubusercontent.com/macca7224/nc-nsw-streaks/main/NSW_Regions.geojson');
             this.data.setStyle((feature) => {
-                const name = feature.getProperty('region');
+                const name = feature.getProperty('nsw_lga__3');
                 const color = colorMap[name];
 
                 return {
